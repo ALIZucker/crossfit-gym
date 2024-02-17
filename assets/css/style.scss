@@ -142,6 +142,7 @@ body {
 .nav-image > img {
   border-radius: 50%;
   border: 1vw #3a3939 solid;
+
 }
 
 .nav-image > span {
@@ -150,7 +151,8 @@ body {
   @include pos(absolute, 1vh);
   left: 0.8vw;
   @include fontall(1.5vw, 700, ltr);
-  @include back($blackcolor, #cbcaca);
+  @include back($blackcolor, #f5f5f5);
+  border: 0.8px #1f1f1f solid;
 }
 
 #nav-content article {
@@ -165,4 +167,56 @@ body {
 
 #nav-content article > h2 {
   @include fontall(1.6vw, 700, ltr);
+}
+
+#main-blog {
+  @include sizeall(100%, 110vh, 0, 0, 0, 0);
+  @include displayall(flex, start, row, wrap);
+
+}
+
+#left-blog {
+  @include sizeall(50%, 100%, 0, 0, 0, 0);
+
+}
+
+#left-blog > img {
+  @include sizeall(100%, 100%, 0, 0, 0, 0);
+  object-fit: fill;
+
+}
+
+#right-blog {
+  @extend #left-blog;
+}
+
+#right-blog > h2 {
+  margin-top: 15vh;
+  margin-left: 5vw;
+  @include fontall(2.2vw, 700, ltr);
+}
+
+#right-blog > p {
+  margin-top: 7vh;
+  margin-left: 5vw;
+  @include fontall(1.4vw, 500, ltr);
+}
+
+#right-blog > a:hover {
+  cursor: pointer;
+  background-color: $yellowvlorhigh;
+  box-shadow: 0 -2px 10px 3px darkgray;
+}
+
+#right-blog > a {
+  display: inline-block;
+  @include fontall(1.3vw, 500, ltr);
+  @include back(white, $yellowvlorlite);
+  @include sizeall(7vw, 4vh, 5vw, 8vh, 3vw, 2vh);
+  box-shadow: 0 3px 10px 4px darkgray;
+  border-radius: 24px;
+  text-align: center;
+}
+#hideme{
+  display: none;
 }

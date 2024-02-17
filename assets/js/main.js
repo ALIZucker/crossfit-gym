@@ -25,7 +25,65 @@ setInterval(function () {
     if (count === 3) {
         count = 0;
     }
-    console.log(count)
+
 }, 2600);
 
 //------------------------------------------------------------
+$(document).ready(function () {
+    $("#post1").on({
+        mouseenter: function () {
+            $(this).css({transform: 'scale(1.1,1.1)'});
+            $("#post1 > h2").css({color:"#efbf01"});
+            $("#post1 > p").css({color:"#efbf01"});
+        },
+        mouseleave: function () {
+            $(this).css({transform: 'scale(1,1)'});
+            console.log("asdasdasdasd444asd");
+            $("#post1 > h2").css({color:'white'});
+            $("#post1 > p").css({color:"white"});
+        },
+
+    });
+    $("#post2").on({
+        mouseenter: function () {
+            $(this).css({transform: 'scale(1.1,1.1)'});
+            $("#post2 > h2").css({color:"#efbf01"});
+            $("#post2 > p").css({color:"#efbf01"});
+        },
+        mouseleave: function () {
+            $(this).css({transform: 'scale(1,1)'});
+            console.log("asdasdasdasd444asd");
+            $("#post2 > h2").css({color:'white'});
+            $("#post2 > p").css({color:"white"});
+        },
+
+    });
+    $("#post3").on({
+        mouseenter: function () {
+            $(this).css({transform: 'scale(1.1,1.1)'});
+            $("#post3 > h2").css({color:"#efbf01"});
+            $("#post3 > p").css({color:"#efbf01"});
+        },
+        mouseleave: function () {
+            $(this).css({transform: 'scale(1,1)'});
+            console.log("asdasdasdasd444asd");
+            $("#post3 > h2").css({color:'white'});
+            $("#post3 > p").css({color:"white"});
+        },
+
+    });
+    $("#post4").on({
+        mouseenter: function () {
+            $(this).css({transform: 'scale(1.1,1.1)'});
+            $("#post4 > h2").css({color:"#efbf01"});
+            $("#post4 > p").css({color:"#efbf01"});
+        },
+        mouseleave: function () {
+            $(this).css({transform: 'scale(1,1)'});
+            console.log("asdasdasdasd444asd");
+            $("#post4 > h2").css({color:'white'});
+            $("#post4 > p").css({color:"white"});
+        },
+
+    });
+});

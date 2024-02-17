@@ -200,6 +200,9 @@ body {
   margin-top: 7vh;
   margin-left: 5vw;
   @include fontall(1.4vw, 500, ltr);
+  text-align: justify;
+  word-break: break-word;
+  margin-right: 4vw;
 }
 
 #right-blog > a:hover {
@@ -217,6 +220,54 @@ body {
   border-radius: 24px;
   text-align: center;
 }
-#hideme{
+
+#hideme {
   display: none;
+}
+
+#main-blog2 {
+  @include sizeall(100%, 97vh, 0, 0, 0, 0);
+  background-image: url("../img/section3.jpg");
+  background-size: cover;
+  background-position: left top;
+  background-attachment: fixed;
+}
+
+#main-blog2 div {
+  @include sizeall(54%, 90vh, 0, 0, 3vw, 7vh);
+  box-sizing: border-box;
+}
+
+#main-blog2 div > h2 {
+  @include fontall(2.2vw, 700, ltr);
+}
+
+#showService {
+  @include sizeall(100%, 75vh, 0, 0, 0, 0);
+  @include displayall(flex, space-around, row, wrap);
+}
+.articleserv:hover{
+  box-shadow: 0.5px 1px 10px 2px darkgray;
+  cursor: pointer;
+}
+.articleserv {
+  background-color: #fff;
+  border-radius: 16px;
+  @include sizeall(17vw, 29vh, 0, 0, 1vw, 1vh);
+  @include displayall(flex, space-between, row, wrap);
+  align-items: center;
+  box-sizing: border-box;
+  box-shadow: 0.5px 1px 10px 2px #d7d6d6;
+}
+.imgserv{
+
+  @include sizeall(5vw, 7vh, 0, 0, 0, 0);
+}
+.posserv{
+  @include fontall(1vw, 400, ltr);
+  text-align: justify;
+  word-break: break-word;
+}
+.h3serv{
+  @include fontall(1.2vw, 700, ltr);
 }

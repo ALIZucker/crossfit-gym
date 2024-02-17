@@ -1,0 +1,168 @@
+$blackcolor: #0b0b0b;
+$yellowvlorlite: #efbf01;
+$yellowvlormed: #efa901;
+$yellowvlorhigh: #ef9301;
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin sizeall($w,$h,$x,$y,$px,$py) {
+  width: $w;
+  height: $h;
+  margin: $y $x;
+  padding: $py $px;
+}
+
+@mixin displayall($distype,$disjusty,$disdire,$diswarp) {
+  display: $distype;
+  justify-content: $disjusty;
+  flex-direction: $disdire;
+  flex-wrap: $diswarp;
+
+}
+
+@mixin fontall($fontsize,$fontw,$directtext) {
+  font-size: $fontsize;
+  font-weight: $fontw;
+  direction: $directtext;
+}
+
+@mixin pos($pos,$top) {
+  position: $pos;
+  top: $top;
+}
+
+@mixin back($colorline,$colorback) {
+  color: $colorline;
+  background-color: $colorback;
+}
+
+//بدنه css
+#contentheader {
+  @include sizeall(100%, 22vh, 0, 0, 0, 0);
+}
+
+#part1 {
+  @include sizeall(100%, 9vh, 0, 0, 0, 2.1vh);
+  text-align: end;
+  @include back(white, $blackcolor);
+  box-sizing: border-box;
+}
+
+#part1 > span {
+  margin-right: 4vw;
+  @include fontall(1.3vw, 500, ltr);
+}
+
+#part2 {
+  @include sizeall(100%, 9vh, 0, 0, 0, 2.1vh);
+  @include displayall(flex, end, row, wrap);
+  @include back(white, $yellowvlormed);
+}
+
+#part2 > ul li:hover {
+  color: $blackcolor;
+}
+
+#part2 > ul {
+  list-style-type: none;
+  align-items: center;
+  @include fontall(1.3vw, 600, ltr);
+  @include displayall(flex, space-between, row, wrap);
+  @include sizeall(48%, auto, 0, 0, 0, 0);
+  margin-right: 2vw;
+}
+
+#part3 {
+  @include sizeall(10vw, 18vh, 0, 0, 0, 0);
+  @include pos(absolute, 4.5vh);
+  background-color: darkgray;
+}
+
+#part3 > img {
+  @include pos(absolute, 3.5vh);
+  left: 3vw;
+  @include sizeall(23vw, 10vh, 0, 0, 0, 0);
+}
+
+#main-img {
+  @include sizeall(100%, 90vh, 0, 0, 0, 0);
+  @include pos(relative, 0);
+}
+
+#main-img > img {
+  @include sizeall(100%, 100%, 0, 0, 0, 0);
+}
+
+#main-img > h1 {
+  @include pos(absolute, 22.5vh);
+  @include fontall(2.2vw, 800, ltr);
+  @include back(white, none);
+  margin-left: 8vw;
+}
+
+#main-img > p {
+  @include pos(absolute, 36.5vh);
+  @include fontall(1.5vw, 400, ltr);
+  @include back(white, none);
+  margin-left: 8vw;
+}
+
+#main-img > div:hover {
+  transform: scale(0.9, 0.9);
+  transition: all 0.2s linear;
+  background-color: $yellowvlorhigh;
+  cursor: pointer;
+}
+
+#main-img > div {
+  @include pos(absolute, 60.5vh);
+  @include fontall(1.6vw, 700, ltr);
+  @include back(white, $yellowvlormed);
+  text-align: center;
+  @include sizeall(8vw, 4vh, 8vw, 0, 3vw, 3vh);
+}
+
+#nav-content {
+  @include sizeall(100%, 60vh, 0, 0, 0, 0);
+  @include back(white, $blackcolor);
+  align-items: center;
+  @include displayall(flex, space-evenly, row, wrap);
+}
+
+.nav-image {
+  position: relative;
+  @include sizeall(13vw, 29vh, 0, 0, 1vw, 0);
+
+}
+
+.nav-image > img {
+  border-radius: 50%;
+  border: 1vw #3a3939 solid;
+}
+
+.nav-image > span {
+  @include sizeall(1.5vw, 3.5vh, 0, 0, 1.5vw, 1.5vh);
+  border-radius: 50%;
+  @include pos(absolute, 1vh);
+  left: 0.8vw;
+  @include fontall(1.5vw, 700, ltr);
+  @include back($blackcolor, #cbcaca);
+}
+
+#nav-content article {
+  @include displayall(flex, center, column, wrap);
+  align-items: center;
+}
+
+#nav-content article > p {
+  @include fontall(1vw, 700, ltr);
+  text-align: center;
+}
+
+#nav-content article > h2 {
+  @include fontall(1.6vw, 700, ltr);
+}

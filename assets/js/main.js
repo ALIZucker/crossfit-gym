@@ -3,6 +3,7 @@ const h1 = document.getElementById("main-img-h1");
 const pslider = document.getElementById("main-img-p");
 const containser = document.getElementById("showService");
 const postme = document.getElementById("post-me");
+const contentteacher = document.getElementById("content-teacher");
 
 //--------------------------------------
 const datasSlider = [{
@@ -83,7 +84,7 @@ const datapost = [{
     src: "assets/img/Gym.jpg",
     titr: "Special Support",
     desc: "Posuere tellus imper facilisis. Curabitur faucibusy"
-},]
+},];
 for (let x of datapost) {
     postme.append(postMe(x.src, x.titr, x.desc))
 }
@@ -92,6 +93,28 @@ const jqarticlepost = document.querySelectorAll(".articlepost");
 const jqpostdiv = document.querySelectorAll(".postdiv");
 const jqh3post = document.querySelectorAll(".h3post");
 const jqpooist2 = document.querySelectorAll(".pooist2");
+//-------------------------------------------------------------------------------------------------teacher
+const datateacher = [
+    {
+        src: "assets/img/team01.jpg",
+        titr: "Maria Nifero",
+        desc: "Yoga Trainer"
+    }, {
+        src: "assets/img/team02.jpg",
+        titr: "Gwen Johnson",
+        desc: "Founder & CEO"
+    }, {
+        src: "assets/img/team03.jpg",
+        titr: "Jennifer Doe",
+        desc: "Arobics Trainer"
+    }, {
+        src: "assets/img/team04.jpg",
+        titr: "Michael Scott",
+        desc: "Gym Trainer"
+    },]
+for (let x of datateacher) {
+    contentteacher.append(postteacher(x.src, x.titr, x.desc))
+}
 
 $(document).ready(function () {
     $("#post1").on({
@@ -295,7 +318,26 @@ $(document).ready(function () {
     });
 
 });
+function postteacher(strimg, strtitle, strp) {
+    const articleteacher = document.createElement("article");
+    const imgteacher = document.createElement("img");
+    const h3teacher = document.createElement("h3");
+    const poteacher = document.createElement("p");
+    const teacherdiv = document.createElement("div");
 
+
+    articleteacher.setAttribute("class", "articleteacher");
+    teacherdiv.setAttribute("class", "teacherdiv");
+    imgteacher.setAttribute("class", "imgteacher");
+    h3teacher.setAttribute("class", "h3teacher");
+    poteacher.setAttribute("class", "poteacher");
+
+    imgteacher.src = strimg;
+    h3teacher.innerHTML = strtitle;
+    poteacher.innerHTML = strp;
+    articleteacher.append(imgteacher, h3teacher, poteacher, teacherdiv);
+    return articleteacher;
+}
 function postMe(strimg, strtitle, strp) {
     const articlepost = document.createElement("article");
     const imgpost = document.createElement("img");

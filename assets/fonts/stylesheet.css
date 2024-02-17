@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'DM Serif Display';
+    src: url('DMSerifDisplay-Regular.eot');
+    src: url('DMSerifDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+    url('DMSerifDisplay-Regular.woff2') format('woff2'),
+    url('DMSerifDisplay-Regular.woff') format('woff'),
+    url('DMSerifDisplay-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lilita One';
+    src: url('LilitaOne.eot');
+    src: url('LilitaOne.eot?#iefix') format('embedded-opentype'),
+    url('LilitaOne.woff2') format('woff2'),
+    url('LilitaOne.woff') format('woff'),
+    url('LilitaOne.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Permanent Marker';
+    src: url('PermanentMarker-Regular.eot');
+    src: url('PermanentMarker-Regular.eot?#iefix') format('embedded-opentype'),
+    url('PermanentMarker-Regular.woff2') format('woff2'),
+    url('PermanentMarker-Regular.woff') format('woff'),
+    url('PermanentMarker-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Protest Riot';
+    src: url('ProtestRiot-Regular.eot');
+    src: url('ProtestRiot-Regular.eot?#iefix') format('embedded-opentype'),
+    url('ProtestRiot-Regular.woff2') format('woff2'),
+    url('ProtestRiot-Regular.woff') format('woff'),
+    url('ProtestRiot-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+#part2 {
+    font-family: "Lilita One";
+}
+
+#main-img > h1 {
+    font-family: "DM Serif Display";
+}
+
+#main-img > p {
+    font-family: "Protest Riot";
+}
+
+#main-img > div {
+    font-family: "Lilita One";
+}
+
+.nav-image > span {
+    font-family: "Protest Riot";
+}
+
+#nav-content article > h2 {
+    font-family: "Lilita One";
+}
+
+#nav-content article > p {
+    font-family: "Protest Riot";
+}
+
+#right-blog > h2 {
+    font-family: "DM Serif Display";
+}
+
+#right-blog > p {
+    font-family: "Protest Riot";
+}
+
+#main-blog2 div > h2 {
+    font-family: "DM Serif Display";
+}
+
+.h3serv {
+    font-family: "Lilita One";
+}
+
+.posserv {
+    font-family: "Protest Riot";
+}
+
+#main-post > h2 {
+    font-family: "DM Serif Display";
+}
+
+#right-blog > a {
+    font-family: "Lilita One";
+}
+
+.h3post {
+    font-family: "Lilita One";
+}
+
+.pooist ,.pooist2{
+    font-family: "Protest Riot";
+    word-spacing: 3px;
+}
+#box-teacher > h2{
+    font-family: "DM Serif Display";
+}
+.h3teacher{
+    font-family: "Lilita One";
+}
+.poteacher{  font-family: "Protest Riot";
+    word-spacing: 3px;}

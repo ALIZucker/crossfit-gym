@@ -246,10 +246,12 @@ body {
   @include sizeall(100%, 75vh, 0, 0, 0, 0);
   @include displayall(flex, space-around, row, wrap);
 }
-.articleserv:hover{
+
+.articleserv:hover {
   box-shadow: 0.5px 1px 10px 2px darkgray;
   cursor: pointer;
 }
+
 .articleserv {
   background-color: #fff;
   border-radius: 16px;
@@ -259,15 +261,72 @@ body {
   box-sizing: border-box;
   box-shadow: 0.5px 1px 10px 2px #d7d6d6;
 }
-.imgserv{
+
+.imgserv {
 
   @include sizeall(5vw, 7vh, 0, 0, 0, 0);
 }
-.posserv{
+
+.posserv {
   @include fontall(1vw, 400, ltr);
   text-align: justify;
   word-break: break-word;
 }
-.h3serv{
+
+.h3serv {
   @include fontall(1.2vw, 700, ltr);
+}
+
+#main-post {
+  @include sizeall(100%, 160vh, 0, 0, 0, 0);
+  background-color: #1f1f1f;
+}
+
+#main-post > h2 {
+  @include fontall(2.2vw, 600, ltr);
+  @include sizeall(100%, 5vh, 0, 0, 0, 3vh);
+  text-align: center;
+  @include back(white, none)
+
+}
+
+#post-me {
+  @include displayall(flex, space-around, row, wrap);
+  @include back(white, none);
+  margin-top: 3vh;
+}
+
+.articlepost {
+  @include sizeall(25vw, 65vh, 0, 2vh, 0, 0);
+  background-color: #313130;
+  position: relative;
+  @include displayall(flex, start, column, wrap);
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.imgpost {
+  @include sizeall(100%, 35vh, 0, 0, 0, 0);
+}
+
+.h3post {
+  @include fontall(1.6vw, 600, ltr);
+}
+
+.pooist {
+  @include fontall(1.1vw, 400, ltr);
+
+}
+.pooist2{
+  @extend .pooist;
+  text-align: justify;
+  margin: 0 2.5vw;
+  display: none;
+}
+.postdiv {
+  @include sizeall(100%, 35vh, 0, 0, 0, 0);
+  position: absolute;
+  background-color: $yellowvlorlite;
+  opacity: 0.0;
 }

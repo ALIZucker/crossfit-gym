@@ -2,7 +2,7 @@ const img = document.getElementById("main-img2");
 const h1 = document.getElementById("main-img-h1");
 const pslider = document.getElementById("main-img-p");
 const containser = document.getElementById("showService");
-
+const postme = document.getElementById("post-me");
 
 //--------------------------------------
 const datasSlider = [{
@@ -58,6 +58,40 @@ for (let x of dataService) {
 }
 const classarticle = document.querySelectorAll(".articleserv");
 const h3service = document.querySelectorAll(".h3serv");
+//----------------------------------------------------------------------------------------post
+const datapost = [{
+    src: "assets/img/our_classes1.jpg",
+    titr: "Strength Training",
+    desc: "Posuere tellus imper facilisis. Curabitur faucibusy"
+}, {
+    src: "assets/img/our_classes2.jpg",
+    titr: "Boxing For Man",
+    desc: "Posuere tellus imper facilisis. Curabitur faucibusy"
+}, {
+    src: "assets/img/our_classes3.jpg",
+    titr: "Fitness For Man",
+    desc: "Posuere tellus imper facilisis. Curabitur faucibusy"
+}, {
+    src: "assets/img/fitness-4.jpg",
+    titr: "Kick Boxing",
+    desc: "Posuere tellus imper facilisis. Curabitur faucibusy"
+}, {
+    src: "assets/img/fitness-5.jpg",
+    titr: "Advanced Gym",
+    desc: "Posuere tellus imper facilisis. Curabitur faucibusy"
+}, {
+    src: "assets/img/Gym.jpg",
+    titr: "Special Support",
+    desc: "Posuere tellus imper facilisis. Curabitur faucibusy"
+},]
+for (let x of datapost) {
+    postme.append(postMe(x.src, x.titr, x.desc))
+}
+
+const jqarticlepost = document.querySelectorAll(".articlepost");
+const jqpostdiv = document.querySelectorAll(".postdiv");
+const jqh3post = document.querySelectorAll(".h3post");
+const jqpooist2 = document.querySelectorAll(".pooist2");
 
 $(document).ready(function () {
     $("#post1").on({
@@ -119,6 +153,7 @@ $(document).ready(function () {
     $("#right-blog >a").click(function () {
         $("#hideme").show(1000).fadeIn(2000)
     });
+    //service-----------
     $(classarticle[0]).on({
         mouseenter: function () {
             $(h3service[0]).css({color: "#efbf01"});
@@ -159,8 +194,130 @@ $(document).ready(function () {
         },
 
     });
+    //post-------------
+    $(jqarticlepost[0]).on({
+        mouseenter: function () {
+            $(jqpostdiv[0]).css({opacity: "0.4"});
+            $(jqh3post[0]).css({color: "#efbf01"});
+            $(jqpooist2[0]).show(700)
+        },
+        mouseleave: function () {
+            $(jqpostdiv[0]).css({opacity: "0.0"});
+            $(jqh3post[0]).css({color: "white"});
+            $(jqpooist2[0]).hide(700)
+
+        },
+
+    });
+    $(jqarticlepost[1]).on({
+        mouseenter: function () {
+            $(jqpostdiv[1]).css({opacity: "0.4"});
+            $(jqh3post[1]).css({color: "#efbf01"});
+            $(jqpooist2[1]).show(700)
+        },
+        mouseleave: function () {
+            $(jqpostdiv[1]).css({opacity: "0.0"});
+            $(jqh3post[1]).css({color: "white"});
+            $(jqpooist2[1]).hide(700)
+
+        },
+
+    });
+    $(jqarticlepost[2]).on({
+        mouseenter: function () {
+            $(jqpostdiv[2]).css({opacity: "0.4"});
+            $(jqh3post[2]).css({color: "#efbf01"});
+            $(jqpooist2[2]).show(700)
+        },
+        mouseleave: function () {
+            $(jqpostdiv[2]).css({opacity: "0.0"});
+            $(jqh3post[2]).css({color: "white"});
+            $(jqpooist2[2]).hide(700)
+
+        },
+
+    });
+    $(jqarticlepost[3]).on({
+        mouseenter: function () {
+            $(jqpostdiv[3]).css({opacity: "0.4"});
+            $(jqh3post[3]).css({color: "#efbf01"});
+            $(jqpooist2[3]).show(700)
+        },
+        mouseleave: function () {
+            $(jqpostdiv[3]).css({opacity: "0.0"});
+            $(jqh3post[3]).css({color: "white"});
+            $(jqpooist2[3]).hide(700)
+
+        },
+
+    });
+    $(jqarticlepost[4]).on({
+        mouseenter: function () {
+            $(jqpostdiv[4]).css({opacity: "0.4"});
+            $(jqh3post[4]).css({color: "#efbf01"});
+            $(jqpooist2[4]).show(700)
+        },
+        mouseleave: function () {
+            $(jqpostdiv[4]).css({opacity: "0.0"});
+            $(jqh3post[4]).css({color: "white"});
+            $(jqpooist2[4]).hide(700)
+
+        },
+
+    });
+    $(jqarticlepost[5]).on({
+        mouseenter: function () {
+            $(jqpostdiv[5]).css({opacity: "0.4"});
+            $(jqh3post[5]).css({color: "#efbf01"});
+            $(jqpooist2[5]).show(700)
+        },
+        mouseleave: function () {
+            $(jqpostdiv[5]).css({opacity: "0.0"});
+            $(jqh3post[5]).css({color: "white"});
+            $(jqpooist2[5]).hide(700)
+
+        },
+
+    });
+    $(jqarticlepost[6]).on({
+        mouseenter: function () {
+            $(jqpostdiv[6]).css({opacity: "0.4"});
+            $(jqh3post[6]).css({color: "#efbf01"});
+            $(jqpooist2[6]).show(700)
+        },
+        mouseleave: function () {
+            $(jqpostdiv[6]).css({opacity: "0.0"});
+            $(jqh3post[6]).css({color: "white"});
+            $(jqpooist2[6]).hide(700)
+
+        },
+
+    });
 
 });
+
+function postMe(strimg, strtitle, strp) {
+    const articlepost = document.createElement("article");
+    const imgpost = document.createElement("img");
+    const h3post = document.createElement("h3");
+    const pooist = document.createElement("p");
+    const pooist2 = document.createElement("p");
+    const postdiv = document.createElement("div");
+
+
+    articlepost.setAttribute("class", "articlepost");
+    postdiv.setAttribute("class", "postdiv");
+    imgpost.setAttribute("class", "imgpost");
+    h3post.setAttribute("class", "h3post");
+    pooist.setAttribute("class", "pooist");
+    pooist2.setAttribute("class", "pooist2");
+    imgpost.src = strimg;
+    h3post.innerHTML = strtitle;
+    pooist.innerHTML = strp;
+    pooist2.innerHTML = "CrossFit is a high-intensity fitness program that incorporates elements of strength training, cardio, and functional movements";
+    articlepost.append(imgpost, h3post, pooist, postdiv, pooist2);
+    return articlepost;
+}
 
 function createostad(strimg, strtitle, strp) {
     const articleserv = document.createElement("article");

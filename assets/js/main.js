@@ -116,6 +116,9 @@ const datateacher = [
 for (let x of datateacher) {
     contentteacher.append(postteacher(x.src, x.titr, x.desc))
 }
+//-----------------------------------------------------------------
+const teacherarticle = document.querySelectorAll(".articleteacher");
+const h3teacherarticle = document.querySelectorAll(".h3teacher");
 
 $(document).ready(function () {
     $("#post1").on({
@@ -177,7 +180,7 @@ $(document).ready(function () {
     $("#right-blog >a").click(function () {
         $("#hideme").show(1000).fadeIn(2000)
     });
-    //service-----------
+    //service--------------------------------
     $(classarticle[0]).on({
         mouseenter: function () {
             $(h3service[0]).css({color: "#efbf01"});
@@ -218,7 +221,41 @@ $(document).ready(function () {
         },
 
     });
-    //post-------------
+    //click-----------------------------------
+    $(classarticle[0]).click(function () {
+        $(this).css({transform: "rotate(40deg)", transition: "all 1s linear", position: 'absolute'});
+        $(this).animate({marginTop: '200vh', zIndex: '-1'}, 1100);
+
+    })
+    $(classarticle[1]).click(function () {
+        $(this).css({transform: "rotate(40deg)", transition: "all 1s linear", position: 'absolute'});
+        $(this).animate({marginTop: '200vh', zIndex: '-1'}, 1100);
+
+    })
+    $(classarticle[2]).click(function () {
+        $(this).css({transform: "rotate(40deg)", transition: "all 1s linear", position: 'absolute'});
+        $(this).animate({marginTop: '200vh', zIndex: '-1'}, 1100);
+
+    })
+    $(classarticle[3]).click(function () {
+        $(this).css({transform: "rotate(45deg)", transition: "all 1s linear", position: 'absolute'});
+        $(this).animate({marginTop: '200vh', zIndex: '-1'}, 1000);
+
+    })
+    //ostad-------------------------------------
+
+    $(teacherarticle[0]).on({
+        mouseenter: function () {
+            $(h3teacherarticle[0]).css({color: "#efbf01"});
+        },
+        mouseleave: function () {
+            $(h3teacherarticle[0]).css({color: "black"});
+        },
+
+    });
+
+
+    //Ostad-------------------------------------
     $(jqarticlepost[0]).on({
         mouseenter: function () {
             $(jqpostdiv[0]).css({opacity: "0.4"});
@@ -320,7 +357,7 @@ $(document).ready(function () {
     //--------------------------------------
     $("#left-blog").show(4000);
     $("#right-blog").show(4000);
-    $(".articlepost").animate({'margin-right': '3vw', 'opacity': '1.0'}, 7000);
+    $(".articlepost").animate({'margin-right': '3vw', 'opacity': '1.0'}, 6000);
 
 });
 

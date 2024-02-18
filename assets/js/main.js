@@ -119,7 +119,7 @@ for (let x of datateacher) {
 //-----------------------------------------------------------------
 const teacherarticle = document.querySelectorAll(".articleteacher");
 const h3teacherarticle = document.querySelectorAll(".h3teacher");
-
+const imgteacherarticle = document.querySelectorAll(".imgteacher");
 $(document).ready(function () {
     $("#post1").on({
         mouseenter: function () {
@@ -253,8 +253,58 @@ $(document).ready(function () {
         },
 
     });
+    $(teacherarticle[1]).on({
+        mouseenter: function () {
+            $(h3teacherarticle[1]).css({color: "#efbf01"});
+        },
+        mouseleave: function () {
+            $(h3teacherarticle[1]).css({color: "black"});
+        },
 
+    });
+    $(teacherarticle[2]).on({
+        mouseenter: function () {
+            $(h3teacherarticle[2]).css({color: "#efbf01"});
+        },
+        mouseleave: function () {
+            $(h3teacherarticle[2]).css({color: "black"});
+        },
 
+    });
+    $(teacherarticle[3]).on({
+        mouseenter: function () {
+            $(h3teacherarticle[3]).css({color: "#efbf01"});
+        },
+        mouseleave: function () {
+            $(h3teacherarticle[3]).css({color: "black"});
+        },
+
+    });
+    //==========================================
+    $(teacherarticle[0]).click(function () {
+        $(imgteacherarticle[0]).css({transform: "rotate(720deg)", transition: "all 1s linear"});
+
+        $(this).fadeOut(2500);
+
+    });
+    $(teacherarticle[1]).click(function () {
+        $(imgteacherarticle[1]).css({transform: "rotate(720deg)", transition: "all 1s linear"});
+
+        $(this).fadeOut(2500);
+
+    });
+    $(teacherarticle[2]).click(function () {
+        $(imgteacherarticle[2]).css({transform: "rotate(720deg)", transition: "all 1s linear"});
+
+        $(this).fadeOut(2500);
+
+    });
+    $(teacherarticle[3]).click(function () {
+        $(imgteacherarticle[3]).css({transform: "rotate(720deg)", transition: "all 1s linear"});
+
+        $(this).fadeOut(2500);
+
+    });
     //Ostad-------------------------------------
     $(jqarticlepost[0]).on({
         mouseenter: function () {

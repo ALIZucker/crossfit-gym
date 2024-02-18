@@ -174,11 +174,12 @@ body {
   @include sizeall(100%, 110vh, 0, 0, 0, 0);
   @include displayall(flex, start, row, wrap);
 
+
 }
 
 #left-blog {
   @include sizeall(50%, 100%, 0, 0, 0, 0);
-
+  display: none;
 }
 
 #left-blog > img {
@@ -189,6 +190,7 @@ body {
 
 #right-blog {
   @extend #left-blog;
+  display: none;
 }
 
 #right-blog > h2 {
@@ -262,6 +264,7 @@ body {
   align-items: center;
   box-sizing: border-box;
   box-shadow: 0.5px 1px 10px 2px #d7d6d6;
+
 }
 
 .imgserv {
@@ -307,6 +310,7 @@ body {
   align-items: center;
   box-sizing: border-box;
   border-radius: 8px;
+  opacity: 0;
 }
 
 .imgpost {
@@ -347,33 +351,56 @@ body {
   @include fontall(3vw, 800, ltr);
 
 }
-#content-teacher{
+
+#content-teacher {
   @include sizeall(90%, 65vh, 5%, 7vh, 0, 0);
   @include back(none, white);
   @include displayall(flex, space-around, row, wrap);
   align-items: center;
   border-radius: 16px;
 }
-.articleteacher{
-  @include sizeall(20vw, 40vh, 0,0 , 0, 0);
+
+.articleteacher {
+  @include sizeall(20vw, 40vh, 0, 0, 0, 0);
   position: relative;
 }
-.teacherdiv{
+
+.teacherdiv {
   opacity: 0.0;
   @include pos(absolute, 1vh);
-  @include sizeall(20vw, 40vh, 0,0 , 0, 0);
-  background-color:$yellowvlormed;
+  @include sizeall(20vw, 40vh, 0, 0, 0, 0);
+  background-color: $yellowvlormed;
   z-index: 1;
 }
-.imgteacher{
+
+.imgteacher {
   border-radius: 50%;
   border: 17px white solid;
   outline-color: $yellowvlorlite;
   outline-style: solid;
 }
-.h3teacher{
+
+.h3teacher {
   @include fontall(1.5vw, 600, ltr);
 }
-.poteacher{
+
+.poteacher {
   @include fontall(1.2vw, 400, ltr);
+}
+
+#footer {
+  @include sizeall(100%, 50vh, 0, 0, 0, 0);
+  @include back(#fff, $blackcolor);
+  @include displayall(flex, center, column, wrap);
+  align-items: center;
+}
+
+#footer > img {
+  background-color: whitesmoke;
+  @include sizeall(24vw, 10vh, 0, 0, 5vw, 2vh);
+  border-radius: 16px;
+}
+
+#footer > p {
+  @include fontall(1.3vw, 400, ltr);
 }

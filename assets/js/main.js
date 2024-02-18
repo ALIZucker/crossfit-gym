@@ -4,6 +4,7 @@ const pslider = document.getElementById("main-img-p");
 const containser = document.getElementById("showService");
 const postme = document.getElementById("post-me");
 const contentteacher = document.getElementById("content-teacher");
+const mainBlog = document.getElementById("main-blog");
 
 //--------------------------------------
 const datasSlider = [{
@@ -316,8 +317,13 @@ $(document).ready(function () {
         },
 
     });
+    //--------------------------------------
+    $("#left-blog").show(4000);
+    $("#right-blog").show(4000);
+    $(".articlepost").animate({'margin-right': '3vw', 'opacity': '1.0'}, 7000);
 
 });
+
 function postteacher(strimg, strtitle, strp) {
     const articleteacher = document.createElement("article");
     const imgteacher = document.createElement("img");
@@ -338,6 +344,7 @@ function postteacher(strimg, strtitle, strp) {
     articleteacher.append(imgteacher, h3teacher, poteacher, teacherdiv);
     return articleteacher;
 }
+
 function postMe(strimg, strtitle, strp) {
     const articlepost = document.createElement("article");
     const imgpost = document.createElement("img");
